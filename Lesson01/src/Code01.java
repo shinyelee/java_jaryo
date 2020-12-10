@@ -20,3 +20,4 @@ public class Code01 {
 
 }
 
+//println문 자동생성 : sysout 입력 후 ctl+space
