@@ -13,7 +13,7 @@ public class Code07 {
 		
 		int i = 0;
 		// 이번엔 while문을 썼다.
-		while(i < grades.length) { // 여기 선언한 변수 i는 for문 안에서만 적용.
+		while(i<grades.length) { // 여기 선언한 변수 i는 for문 안에서만 적용.
 			System.out.println("Grade " + (i+1) + ": " + grades[i]);
 			i++;
 		}
