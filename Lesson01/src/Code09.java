@@ -17,9 +17,9 @@ public class Code09 {
 			data [i] = kb.nextInt();
 		kb.close();
 
-		int tmp = data[n-1];		 // 마지막 값(예시 기준 [5])을 임시로 킵해두는 일회용 변수.
+		int tmp = data[n-1];		// 마지막 값(예시 기준 [5])을 임시로 킵해두는 일회용 변수.
 		for(int i=n-2; i>=0; i--) { // 나머지 값(예시 기준 [1 2 3 4])
-			data[i+1] = data [i];	 // 한 칸씩 shift.
+			data[i+1] = data [i];	// 한 칸씩 shift.
 		}
 		data[0] = tmp;
 		
