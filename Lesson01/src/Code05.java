@@ -4,7 +4,7 @@ public class Code05 {
 	public static void main(String[] args) {
 		
 		// 크기 5인 정수형 배열.
-		int [] grades;		  // 배열 선언(declare the array)
+		int [] grades;		 // 배열 선언(declare the array)
 		grades = new int[5]; // 배열 생성(allocate memory for 5 indices)
 		
 		// 크기 100인 실수형 배열.
