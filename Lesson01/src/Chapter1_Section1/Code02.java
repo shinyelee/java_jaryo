@@ -1,3 +1,5 @@
+package Chapter1_Section1;
+
 import java.util.Scanner; // import문은 라이브러리를 사용할 수 있게 해준다.
 
 public class Code02 {

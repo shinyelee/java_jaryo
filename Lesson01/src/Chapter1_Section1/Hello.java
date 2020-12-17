@@ -1,3 +1,4 @@
+package Chapter1_Section1;
 
 public class Hello { // Java 프로그램은 하나 혹은 그 이상의 클래스로 구성된다. 이 프로그램은 Hello라는 이름의 하나의 클래스로 이뤄졌다.
 					 // 클래스명은 대문자로 짓는 게 국룰이다. 들여쓰기도 국룰이다.

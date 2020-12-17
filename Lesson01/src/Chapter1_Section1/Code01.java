@@ -1,3 +1,5 @@
+package Chapter1_Section1;
+
 // static int num; // 클래스 밖에서 변수 선언 - 불가능
 
 public class Code01 {

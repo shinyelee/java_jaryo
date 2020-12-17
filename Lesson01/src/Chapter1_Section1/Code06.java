@@ -1,3 +1,4 @@
+package Chapter1_Section1;
 
 public class Code06 {
 

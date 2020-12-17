@@ -1,3 +1,5 @@
+package Chapter1_Section1;
+
 import java.util.Scanner;
 
 public class Code15 {
