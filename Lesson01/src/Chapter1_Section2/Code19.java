@@ -15,15 +15,15 @@ public class Code19 {
 		int n = 0;
 		
 		try {
-			Scanner inFile = new Scanner(new File("input.txt")); // 프로젝트 폴더 내 파일을 읽어온다.
+			Scanner sc = new Scanner(new File("input.txt")); // 프로젝트 폴더 내 파일을 읽어온다.
 			
-			while(inFile.hasNext()) { // hasNext()는 파일 내 읽을 내용이 더 있는지 확인(detect End of File).
-				name[n] = inFile.next();
-				number[n] = inFile.next();
+			while(sc.hasNext()) { // hasNext()는 파일 내 읽을 내용이 더 있는지 확인(detect End of File).
+				name[n] = sc.next();
+				number[n] = sc.next();
 				n++;
 			}
 			
-			inFile.close();
+			sc.close();
 		} catch (FileNotFoundException e) {
 			System.out.println("No data file exists"); // e.printStackTrace();를 사용해도 됨.
 			System.exit(1); // 0은 프로그램의 정상적  종료, 1은 비정상적인 종료를 의미한다.
