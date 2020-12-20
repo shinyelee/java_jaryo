@@ -26,7 +26,7 @@ public class Code22 {
 //		$ exit								// 프로그램 종료.
 	
 	static String [] words = new String [5000]; // 단어들의 목록을 저장할 배열.
-	static int [] count = new int [5000]; // 각 단어의 등장 횟수를 저장.
+	static int [] count = new int [5000];	    // 각 단어의 등장 횟수를 저장.
 	static int n = 0;							// 저장된 단어의 개수.
 
 	public static void main(String[] args) {
@@ -34,7 +34,7 @@ public class Code22 {
 		Scanner kb = new Scanner(System.in);
 		while(true) {					// while문을 한번 돌 때마다 사용자로부터 하나의 명령을 받아 수행한다.
 										// 언제 while문을 종료할지가 미리 정해져 있지 않을 경우
-			System.out.print("$ ");	// 이렇게 무한 루프를 만들고,
+			System.out.print("$ ");		// 이렇게 무한 루프를 만들고,
 			String command = kb.next();	// 종료할 조건이 만족(exit 명령 입력)되면
 										// break문으로 루프를 빠져나오는 것은 하나의 전형적인 스타일이다.
 			if(command.equals("read")) {
@@ -76,7 +76,7 @@ public class Code22 {
 	
 	static void addWord(String str) {
 		int index = findWord(str); // returns -1 if not found
-		if(index != -1) {		   // found
+		if(index != -1) {		   // found words[index] == str
 			count[index]++;
 		} else {				   // not found
 			words[n] = str;
@@ -87,7 +87,7 @@ public class Code22 {
 	
 	static int findWord(String str) {
 		for(int i=0; i<n; i++)
-			if(words[i].equalsIgnoreCase(str)) // .equalsIgnoreCase는 대소문자를 구분하지 않는다.
+			if(words[i].equals(str))
 				return i;
 		return -1;
 	}
