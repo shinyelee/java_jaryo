@@ -87,6 +87,12 @@ public class Code23 {
 		if(index != -1) { // exist
 			count[index]++;
 		} else {		  // not exist
+			int i = n-1;
+			while(i>=0 && words[i].compareTo(str)>0) { // 4 해결(알파벳 순으로 정렬).
+				words[i+1] = words[i];
+				count[i+1] = count[i];
+				i--;
+			}
 			words[n] = str;
 			count[n] = 1;
 			n++;
