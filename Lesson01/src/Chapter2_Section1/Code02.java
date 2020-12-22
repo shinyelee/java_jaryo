@@ -1,35 +1,30 @@
 package Chapter2_Section1;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
-
 public class Code02 {
 
-	static Person1 [] members = new Person1 [100]; // 배열 생성해야 함(참조 변수).
-	static int n = 0; // 메서드 외부에서 변수 선언할 땐 static으로.
-	
 	public static void main(String[] args) {
 		
-		try {
-			Scanner in = new Scanner(new File("input.txt"));
-			while(in.hasNext()) {
-				String nm = in.next();
-				String nb = in.next();
-				
-				members[n] = new Person1(); // 객체 생성해야 함(참조 변수).
-				members[n].name = nm;
-				members[n].number = nb;
-				n++;
-			}
-			in.close();
-		} catch (FileNotFoundException e) {
-			System.out.println("No data file.");
-			System.exit(1);
-		}
+		Person1 first = new Person1();
 		
-		for(int i=0; i<n; i++)
-			System.out.println(members[i].name + " " + members[i].number);
+		first.name = "John";
+		first.number = "01022223333";
+		System.out.println("Name: " + first.name + ", Number: " + first.number);
+		
+		Person1 second = first;
+		second.name = "Tom"; // second.name만 바꿨지만 first.name도 동일한 객체를 참조하기 때문에 둘 다 Tom 출력.
+		System.out.println("First.Name: " + first.name);
+		System.out.println("Second.Name: " + second.name);
+		
+		Person1 [] members = new Person1 [100];
+		members[0] = first;
+		members[1] = second;
+		System.out.println("[0]Name: " + members[0].name + ", Number: " + members[1].number);
+		System.out.println("[1]Name: " + members[1].name + ", Number: " + members[1].number);
+		
+		members[2] = new Person1();		   // 이 행 생략하면(객체 생성 안 하면) NullPointerException 발생.
+		members[2].name = "Harry";		   // 배열의 각 칸은 Person1 타입 -> 프리미티브 타입이 아닌 참조 변수.
+		members[2].number = "01009430943"; // 참조 변수는 객체 생성 없이 이름, 번호를 바로 저장할 수는 없다.
+		System.out.println("[2]Name: " + members[2].name + ", Number: " + members[2].number);
 	}
 
 }
