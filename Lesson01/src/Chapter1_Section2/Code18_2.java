@@ -20,7 +20,7 @@ public class Code18_2 {
 		
 		System.out.println("Sorted data: ");
 		for(int i=0; i<n; i++)
-			System.out.println(data[i]);
+			System.out.print(data[i] + " ");
 	}
 
 	static void bubbleSort(int n, int [] data) {

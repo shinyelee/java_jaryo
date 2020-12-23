@@ -33,7 +33,7 @@ public class Code09 {
 //		data[0] = tmp;
 		
 		for(int i=0; i<n; i++) // ÃÖÁ¾.
-			System.out.println(data[i]);
+			System.out.print(data[i] + " ");
 	}
 
 }

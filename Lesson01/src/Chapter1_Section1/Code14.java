@@ -31,7 +31,7 @@ public class Code14 { // Code13Àº pass.
 		
 		System.out.println("Sorted data: ");
 		for(int i=0; i<n; i++)
-			System.out.println(data[i]);
+			System.out.print(data[i] + " ");
 		
 	}
 

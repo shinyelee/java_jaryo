@@ -15,7 +15,7 @@ public class Code10 {
 			// 하나라도 약수가 있다면 이미 소수가 아니므로 더이상 검사할 필요가 없다.
 			}
 			if(isPrime)
-				System.out.println(n);
+				System.out.print(n + " ");
 		}
 
 	}

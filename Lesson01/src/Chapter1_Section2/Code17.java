@@ -8,7 +8,7 @@ public class Code17 {
 		
 		for(int n=0; n<=100; n++) { // n을 -100 뭐 이런 수로 해도 문제 X.
 			if(isPrime(n))
-				System.out.println(n);
+				System.out.print(n + " ");
 		}
 	}
 	

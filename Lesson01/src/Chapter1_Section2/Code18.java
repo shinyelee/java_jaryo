@@ -21,7 +21,7 @@ public class Code18 {
 		
 		System.out.println("Sorted data: ");
 		for(int i=0; i<n; i++)
-			System.out.println(data[i]);
+			System.out.print(data[i] + " ");
 	}
 
 	// 버블정렬(bubble sort) 알고리즘
