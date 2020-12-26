@@ -31,7 +31,7 @@ public class Code05 {
 				rects[n].lu.x = in.nextInt();
 				rects[n].lu.y = in.nextInt();
 				rects[n].width = in.nextInt();
-				rects[n].width = in.nextInt();
+				rects[n].height = in.nextInt();
 				n++;
 			}
 			in.close();
