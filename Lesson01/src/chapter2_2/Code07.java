@@ -2,7 +2,7 @@ package chapter2_2;
 
 import java.util.Scanner;
 
-public class Code07 {
+public class Code07 { // Code06 ¼öÁ¤
 
 	static Polynomial2 [] polys = new Polynomial2 [100];
 	static int n = 0;
@@ -62,10 +62,6 @@ public class Code07 {
 		
 	}
 
-	private static int calcTerm(Term2 term, int x) {
-		return (int) (term.coef * Math.pow(x, term.expo));
-	}
-	
 	private static int find(char name) {
 		for(int i=0; i<n; i++)
 			if (polys[i].name == name)
