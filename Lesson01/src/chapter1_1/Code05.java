@@ -1,0 +1,39 @@
+package chapter1_1;
+
+public class Code05 {
+	
+	public static void main(String[] args) {
+		
+		// ?¬ê¸° 5?? ?????? ë°°ì??.
+		int [] grades;		 // ë°°ì?? ????(declare the array)
+		grades = new int[5]; // ë°°ì?? ????(allocate memory for 5 indices)
+		
+		// ?¬ê¸° 100?? ?¤ì???? ë°°ì??.
+		double [] array;
+		array = new double[100];
+		
+		// ?¬ê¸° 20?? ë¬¸ì???? ë°°ì??.
+		char [] word;
+		word = new char[20];
+		
+		// ????ì²??? ??ê¸°í?´ë?? ??.
+//		int [] grades = new int [5];
+//		double [] array = new double [100];
+//		char [] word = new char [20];
+		
+		// ë°°ì?´ì?? ê°?ì¹¸ì?? ?°ì?´í?? ????(assign some values to the array)
+		grades[0] = 100; // ë°°ì?´ì?? ?¸ë?±ì?¤ë?? 1?? ???? 0ë¶??? ????????.
+		grades[1] = 76;
+		grades[2] = 92;
+		grades[3] = 95;
+		grades[4] = 14;
+		
+		// ê°? ì¶???(print out each value)
+		System.out.println(grades[0]);
+		System.out.println(grades[1]);
+		System.out.println(grades[2]);
+		System.out.println(grades[3]);
+		System.out.println(grades[4]);
+	}
+
+}
