@@ -2,11 +2,10 @@ package chapter2_2;
 
 public class OrthoPolygon {
 
-	public int n; // 저장된 꼭지점의 개수
+	public int n = 0; // 저장된 꼭지점의 개수
 	public MyPoint2 [] vertices; // 꼭지점들
 	
 	public OrthoPolygon(int k) { // 꼭지점의 개수가 k개인 다각형을 만듦.
-		n = 0;
 		vertices = new MyPoint2 [k];
 	}
 	
@@ -16,10 +15,9 @@ public class OrthoPolygon {
 	
 	public int maxX() { // 꼭지점들의 x-좌표의 최대값을 찾아서 반환.
 		int max = vertices[0].x;
-		for(int i=0; i<n; i++) {
+		for(int i=0; i<n; i++)
 			if(vertices[i].x>max)
 				max = vertices[i].x;
-		}
 		return max;
 	}
 	
@@ -32,11 +30,11 @@ public class OrthoPolygon {
 		for(int i=0; i<n; i++) {
 			OrthoLine edge = new OrthoLine(vertices[i], vertices[(i+1)%n]);
 			// n-1번째 선분은 마지막 꼭지점(vertex[n-1])과 첫번째 꼭지점(vertex[0])을 연결.			
-			if(arrow.intersects(edge))
+			if(edge.intersects(arrow))
 			// arrow와 교차하는 다각형의 변의 개수를 카운트.
 			// 결과가 짝수면 내부, 홀수면 외부.
 				count++;
 		}
-		return(count%2 == 1);
+		return count%2 != 0;
 	}
 }

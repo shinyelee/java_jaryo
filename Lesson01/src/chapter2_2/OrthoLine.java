@@ -8,7 +8,7 @@ public class OrthoLine {
 	public OrthoLine(MyPoint2 p, MyPoint2 q) {
 		u = p;
 		v = q;
-		if(p.x>q.x || p.x==q.x && q.y>q.y)
+		if(p.x>q.x || p.x==q.x && p.y>q.y)
 			swap();
 	}
 	
@@ -19,11 +19,6 @@ public class OrthoLine {
 		MyPoint2 tmp = u;
 		u = v;
 		v = tmp;
-	}
-	
-	public OrthoLine(int x1, int y1, int x2, int y2) {
-		u = new MyPoint2(x1, y1);
-		u = new MyPoint2(x2, y2);
 	}
 	
 	public boolean isVertical() { // 수직 선분인지 검사.
