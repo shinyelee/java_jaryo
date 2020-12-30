@@ -21,16 +21,21 @@ public class OrthoLine {
 		v = tmp;
 	}
 	
+	public OrthoLine(int x1, int y1, int x2, int y2) {
+		u = new MyPoint2(x1, y1);
+		v = new MyPoint2(x2, y2);
+	}
+	
 	public boolean isVertical() { // 수직 선분인지 검사.
 		return u.x == v.x;
 	}
 	
 	public boolean intersects(OrthoLine other) { // 두 선분이 교차하는지 검사.
 		if(isVertical() && !other.isVertical()) {
-			return(other.u.x<u.x && other.v.x>u.x && other.u.y>u.y && other.u.y<v.y);
+			return(other.u.x<u.x && other.v.x>u.x && u.y<other.u.y && v.y>other.u.y);
 		}
 		else if(!isVertical() && other.isVertical()) {
-			return(other.u.y<u.y && other.v.y>u.y && other.u.x>u.x && other.u.x<v.x);
+			return(other.u.y<u.y && other.v.y>u.y && u.x<other.u.x && v.x>other.u.x);
 		}
 		else
 			return false;
