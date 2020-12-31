@@ -2,5 +2,6 @@ package T02;
 
 public class Product {
 
-	protected String power = "off";
+	public String power = "off";
+//	protected String power = "off";
 }
