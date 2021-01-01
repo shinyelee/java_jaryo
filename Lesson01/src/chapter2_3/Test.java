@@ -15,7 +15,7 @@ public class Test {
 	}
 	
 	public void print2() {	
-		System.out.println("s = " + s);
+//		System.out.println("s = " + s);
 		System.out.println("t = " + t);
 	}
 	
