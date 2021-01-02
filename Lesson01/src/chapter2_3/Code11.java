@@ -2,10 +2,10 @@ package chapter2_3;
 
 import java.util.Scanner;
 
-public class Code11 { // main 메서드만 static이 되도록 수정하기.
+public class Code11 { // 일부 public -> private로 수정.
 
-	Polynomial3 [] polys = new Polynomial3 [100];
-	int n = 0;
+	private Polynomial3 [] polys = new Polynomial3 [100];
+	private int n = 0;
 	
 	public void processCommand() {
 		
@@ -61,7 +61,7 @@ public class Code11 { // main 메서드만 static이 되도록 수정하기.
 
 	private int find(char name) {
 		for(int i=0; i<n; i++)
-			if (polys[i].name == name)
+			if (polys[i].getName() == name)
 				return i;
 		return -1;
 	}

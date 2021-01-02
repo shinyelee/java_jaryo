@@ -1,10 +1,10 @@
 package chapter2_3;
 
-public class Polynomial3 {
+public class Polynomial3 { // 일부 public -> private로 수정.
 
-	public char name;
-	public Term3 [] terms;
-	public int nTerms;
+	private char name;
+	private Term3 [] terms;
+	private int nTerms;
 	
 	public Polynomial3() { 
 		nTerms = 0;
@@ -15,6 +15,10 @@ public class Polynomial3 {
 		this.name = name;
 		nTerms = 0;
 		terms = new Term3[100];
+	}
+	
+	public char getName() { // getter
+		return name;
 	}
 	
 	public void addTerm(int c, int e) {
@@ -33,7 +37,7 @@ public class Polynomial3 {
 		}
 	}
 	
-	public int findTerm(int e) {
+	private int findTerm(int e) {
 		for(int i=0; i<nTerms && terms[i].getExpo()>=e; i++)
 			if(terms[i].getExpo() == e)
 				return i;
