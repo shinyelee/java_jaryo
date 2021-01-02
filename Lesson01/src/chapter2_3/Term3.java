@@ -2,11 +2,11 @@ package chapter2_3;
 
 public class Term3 {
 	
-	public int coef;
-	private int expo; // Ä¸½¶È­
+	private int coef; // Ä¸½¶È­(ÀÚµ¿)
+	private int expo; // Ä¸½¶È­(¼öµ¿)
 	
 	public Term3(int c, int e) {
-		coef = c;
+		setCoef(c);
 		expo = e;
 	}
 	
@@ -15,11 +15,19 @@ public class Term3 {
 	}					   // ÀÇµµÄ¡ ¾ÊÀº ¿À·ù ¹æÁö
 	
 	public int calcTerm(int x) {
-		return (int) (coef * Math.pow(x, expo));
+		return (int) (getCoef() * Math.pow(x, expo));
 	}
 
 	public void printTerm() {
-		System.out.print(coef + "x^" + expo);
+		System.out.print(getCoef() + "x^" + expo);
+	}
+
+	public int getCoef() { // getter, accessor
+		return coef;
+	}
+
+	public void setCoef(int coef) { // setter, mutator
+		this.coef = coef;
 	}
 
 }

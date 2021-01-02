@@ -20,7 +20,7 @@ public class Polynomial3 {
 	public void addTerm(int c, int e) {
 		int index = findTerm(e);
 		if(index != -1) {
-			terms[index].coef += c;
+			terms[index].setCoef(terms[index].getCoef() + c);
 		}
 		else {
 			int i = nTerms-1;
