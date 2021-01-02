@@ -2,23 +2,18 @@ package ProjectMethod;
 
 public class WhyMethod {
 
-	public static void printTwoTimesA() {
-		// 여기서 1번만 수정하면
+	public static void printTwoTimes(String text) {
 		System.out.println("-");
-		System.out.println("A");
-		System.out.println("A");
+		System.out.println(text); // 출력하는 문자를 자유롭게 변경하려면
+		System.out.println(text);
 	}
 	
 	public static void main(String[] args) {
-		// 오조오억번 수정할 필요 없음
-		printTwoTimesA();
-		printTwoTimesA();
-		printTwoTimesA();
+		printTwoTimes("a"); // ""에 원하는 문자를 입력하면 된다.
+		printTwoTimes("a");
+		printTwoTimes("a");
+		printTwoTimes("b");
 
 	}
 
 }
-
-// 코드 자동으로 메소드화하는 방법?
-// 블럭선택 후 우클릭 -> Refactor -> Extract Method...
-// -> Method name 설정 -> public 체크 -> OK -> OK
