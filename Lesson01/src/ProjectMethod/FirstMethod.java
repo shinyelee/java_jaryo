@@ -6,6 +6,7 @@ public class FirstMethod {
 		
 		System.out.println("Hello Method");
 		System.out.println(Math.floor(1.1));
+//		Email.send("이메일주소", "Math floor", Math.floor(1.1));
 	}
 
 }
