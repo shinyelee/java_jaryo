@@ -1,32 +1,23 @@
 package projectOOP;
 
-class Print {
-	
-	public static String delimiter = "";
-	
-	public static void A() {
-		System.out.print(delimiter);
-		System.out.print("A");
-		System.out.println("A");
-	}
-	
-	public static void B() {
-		System.out.print(delimiter);
-		System.out.print("B");
-		System.out.println("B");
-	}
-}
-
 public class MyOOP {
 	
 	public static void main(String[] args) {
-		Print.delimiter = "---";
-		Print.A();
-		Print.B();
 		
-		Print.delimiter = "***";
-		Print.A();
-		Print.B();
+		Print p1 = new Print();
+		p1.delimiter = "---";
+		p1.A();
+		p1.B();
+		
+		Print p2 = new Print();
+		p2.delimiter = "***";
+		p2.A();
+		p2.B();
+		
+		p1.A();
+		p2.A();
+		p1.A();
+		p2.A();
 	}
 
 }
