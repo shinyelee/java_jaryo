@@ -1,4 +1,4 @@
-package ProjectMethod;
+package projectMethod;
 
 class Greeting{
     //public, protected, default, private

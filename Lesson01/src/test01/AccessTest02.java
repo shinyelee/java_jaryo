@@ -1,4 +1,4 @@
-package T01;
+package test01;
 
 public class AccessTest02 {
 

@@ -1,4 +1,4 @@
-package T02;
+package test02;
 
 public class Product {
 

@@ -1,6 +1,6 @@
-package T01;
+package test01;
 
-import T02.*; // 패키지 T02 내 클래스와 메서드 사용 위해.
+import test02.*;
 
 class TV {
 	

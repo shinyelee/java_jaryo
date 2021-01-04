@@ -1,4 +1,4 @@
-package ProjectMethod;
+package projectMethod;
 
 public class FirstMethod {
 

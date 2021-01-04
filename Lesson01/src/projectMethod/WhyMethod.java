@@ -1,4 +1,4 @@
-package ProjectMethod;
+package projectMethod;
 
 import java.io.FileWriter;
 import java.io.IOException;
