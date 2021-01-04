@@ -1,6 +1,6 @@
 package projectOOP;
 
-class Print {
+class Print { // Print 클래스 파일로 따로 분리함.
 
 public static String delimiter = "";
 	

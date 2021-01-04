@@ -12,12 +12,7 @@ public class MyOOP {
 		Print p2 = new Print();
 		p2.delimiter = "***";
 		p2.A();
-		p2.B();
-		
-		p1.A();
-		p2.A();
-		p1.A();
-		p2.A();
+		p2.B();		
 	}
 
 }
