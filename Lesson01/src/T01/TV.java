@@ -1,6 +1,6 @@
-package test01;
+package T01;
 
-import test02.*;
+import T02.*;
 
 class TV {
 	
