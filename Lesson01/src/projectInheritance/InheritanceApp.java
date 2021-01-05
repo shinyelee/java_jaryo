@@ -7,7 +7,7 @@ class Cal{
     // Overloading
     public int sum(int v1, int v2, int v3){
         return this.sum(v1, v2)+v3;
-    } // this는 자기 자신.
+    } // this는 자기 자신 내 메소드/필드 지칭(가독성↑).
 }
 class Cal3 extends Cal{
     public int minus(int v1, int v2){
@@ -17,7 +17,7 @@ class Cal3 extends Cal{
     public int sum(int v1, int v2){
         System.out.println("Cal3!!");
         return super.sum(v1, v2);
-    } // super는 부모.
+    } // super는 부모 클래스 내 메소드/필드 지칭(가독성↑).
  
 }
 public class InheritanceApp {
