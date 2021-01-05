@@ -6,8 +6,8 @@ class Cal{
     }
     // Overloading
     public int sum(int v1, int v2, int v3){
-        return v1+v2+v3;
-    }
+        return this.sum(v1, v2)+v3;
+    } // this는 자기 자신.
 }
 class Cal3 extends Cal{
     public int minus(int v1, int v2){
@@ -16,8 +16,8 @@ class Cal3 extends Cal{
     // Overriding
     public int sum(int v1, int v2){
         System.out.println("Cal3!!");
-        return v1+v2;
-    }
+        return super.sum(v1, v2);
+    } // super는 부모.
  
 }
 public class InheritanceApp {
