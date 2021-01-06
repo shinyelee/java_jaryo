@@ -1,7 +1,7 @@
 package projectInterface;
 
 // 인터페이스에서 메소드와 변수 정의 가능
-// (메소드 정의시 내용은 들엉가지 않음).
+// (메소드 정의시 내용은 들어가지 않음).
 interface Calculable {
 	double PI = 3.14;
 	int sum(int v1, int v2);
@@ -24,14 +24,18 @@ class RealCal implements Calculable, Printable {
 	
 }
 
+class AdvancedPrint implements Printable {
+	public void print() {
+		System.out.println("This is RealCal!!");
+	}
+}
+
 public class InterfaceApp {
 
 	public static void main(String[] args) {
-		// 더하기 기능이 있는 클래스를 만들어주세요.
-		RealCal c = new RealCal();
-		System.out.println(c.sum(2, 1));
+		// 다형성
+		Printable c = new AdvancedPrint();
 		c.print();
-		System.out.println(c.PI);
 	}
 
 }
