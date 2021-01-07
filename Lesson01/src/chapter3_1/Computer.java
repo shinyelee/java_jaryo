@@ -2,7 +2,8 @@ package chapter3_1;
 
 public class Computer {
 
-	// 데이터 멤버가 public이면 직접 엑세스 가능 -> 엑세스 메서드가 굳이 필요하지 않다.
+	// 데이터 멤버가 private이면 자녀 클래스에서 사용 불가.
+	// protected는 자녀 클래스에서도 사용할 수 있다.
 	public String manufacturer;
 	public String processor;
 	public int ramSize;
@@ -38,9 +39,9 @@ public class Computer {
 	public String toString() { //
 		String result = "Manufacturer: " + manufacturer +
 						"\nCPU: " + processor +
-						"\nRAM: " + ramSize + "megabytes" +
-						"\nDisk: " + diskSize + "gigabytes" +
-						"\nProcessor speed: " + processorSpeed + "gigahertz";
+						"\nRAM: " + ramSize + " MB" +
+						"\nDisk: " + diskSize + " GB" +
+						"\nProcessor speed: " + processorSpeed + " GHz";
 		return result;
 	}
 	
