@@ -11,9 +11,6 @@ public class Notebook extends Computer {
 		this.weight = weight;
 	}
 	
-	// 부모로부터 받은  메서드를 그대로 쓰지 않고 바꾸고 싶으면
-	// -> 똑같은 이름의 메서드를 만들어서 덮어쓰면 되는데
-	// -> 이걸 Method Overriding이라고 함.
 	public String toString() {
 		String result = super.toString() +
 						"\nScreen Size: " + screenSize + " inches" +
@@ -22,9 +19,19 @@ public class Notebook extends Computer {
 	}
 	
 	public static void main(String[] args) {
-		Notebook test = new Notebook("Dell", "i5", 4, 1000, 3.2, 15.6, 1.2);
+		// 다형성(Polymorphism) :
+		// Computer 타입의 참조변수 test가 Notebook 타입의 객체를 참조.
+		Computer test = new Notebook("Dell", "i5", 4, 1000, 3.2, 15.6, 1.2);
+		
+		// 반대의 경우는 성립하지 않음.
+//		Notebook test = new Computer("Dell", "i5", 4, 1000, 3.2);
 		
 		System.out.println(test.computePower());
 		System.out.println(test.toString());
+		// test는 Computer 타입의 변수면서 실제로는 Notebook 개체를 참조하고 있다.
+		// 그리고 두 클래스는 각자의 toString()을 가지고 있다.
+		// 여기서 둘 중 어떤 toString() 메서드가 실행될까?
+		// -> Notebook 클래스의 toString() 메서드가 실행된다.
+		// 즉 동적 바인딩(dynamic binding)이 일어난다.
 	}
 }
