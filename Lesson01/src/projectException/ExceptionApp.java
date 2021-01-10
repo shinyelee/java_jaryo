@@ -12,10 +12,8 @@ public class ExceptionApp {
 			System.out.println(3);
 			System.out.println(2/0);
 			System.out.println(4); // 여기까지 출력 X.
-		} catch (ArrayIndexOutOfBoundsException e) {
-			System.out.println("존재하지 않는 값입니다.");
-		} catch (ArithmeticException e) {
-			System.out.println("잘못된 계산입니다.");
+		} catch (Exception e) {
+			System.out.println("뭔가 잘못된 것 같다."); // 예외 퉁치기.
 		}
 		System.out.println(5);
 	}
