@@ -10,11 +10,11 @@ public class Triangle extends Shape {
 		height = h;
 	}
 	
-	public double computerArea() {
+	public double computeArea() {
 		return (double)width*height/2;
 	}
 	
-	public double computerPerimeter() {
+	public double computePerimeter() {
 		return 2.0*(width+height);
 	}
 	

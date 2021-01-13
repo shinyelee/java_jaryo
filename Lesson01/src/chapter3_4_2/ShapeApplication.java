@@ -1,5 +1,6 @@
 package chapter3_4_2;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ShapeApplication {
@@ -17,33 +18,31 @@ public class ShapeApplication {
 			else if(command.equals("show") || command.equals("showDetail"))
 				handleShow(command.equals("showDetail"));
 			else if(command.equals("sort"))
-				handleSort();
+				Arrays.sort(shapes, 0, n); // generic method
 			else if(command.equals("exit"))
 				break;
 		}
 		kb.close();
 	}
 
-
-	private void handleSort() {
-		for(int i=n-1; i>0; i--) {
-			for(int j=0; j<i; j++) {
-				if(shapes[j].computerArea() > shapes[j+1].computerArea()) {
-					Shape tmp = shapes[j];
-					shapes[j] = shapes[j+1];
-					shapes[j+1] = tmp;
-				}
-			}
-		}
-		
-	}
-
+//	private void bubbleSort() {
+//		for(int i=n-1; i>0; i--) {
+//			for(int j=0; j<i; j++) {
+//				if(shapes[j].computeArea() > shapes[j+1].computeArea()) {
+//					Shape tmp = shapes[j];
+//					shapes[j] = shapes[j+1];
+//					shapes[j+1] = tmp;
+//				}
+//			}
+//		}		
+//	}
+	
 	private void handleShow(boolean detailed) {
 		for(int i=0; i<n; i++) {
 			System.out.println((i+1) + ". " + shapes[i].toString());
 			if(detailed) {
-				System.out.println("  The area is " + shapes[i].computerArea());
-				System.out.println("  The perimeter is " + shapes[i].computerPerimeter());
+				System.out.println("  The area is " + shapes[i].computeArea());
+				System.out.println("  The perimeter is " + shapes[i].computePerimeter());
 			}
 		}
 		

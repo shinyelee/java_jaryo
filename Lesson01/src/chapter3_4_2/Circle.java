@@ -16,11 +16,11 @@ public class Circle extends Shape {
 		this.radius = radius;
 	}
 
-	public double computerArea() {
+	public double computeArea() {
 		return Math.PI*radius*radius;
 	}
 	
-	public double computerPerimeter() {
+	public double computePerimeter() {
 		return 2.0*Math.PI*radius;
 	}
 	

@@ -18,11 +18,11 @@ public class Rectangle extends Shape {
 		return height;
 	}
 
-	public double computerArea() {
+	public double computeArea() {
 		return (double)width*height;
 	}
 	
-	public double computerPerimeter() {
+	public double computePerimeter() {
 		return 2.0*(width+height);
 	}
 	
